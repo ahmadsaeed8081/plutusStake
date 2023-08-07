@@ -1,9 +1,9 @@
-export const stake1_address="0x33d958c9A4893f5D0A48f5D427f10F9e7736fcd5";
+export const stake1_address="0x8aac9d23f536e0aF33f70444C07659e65e1e0388";
 export const stake2_address="0x0F26A1Ba7D4867983880B527CE3E36F41Ab8CDe0";
-export const stake3_address="0x1cf9586e1b3a5e471f9a4e6945550E967d916814";
-export const stake4_address="0x1dBD8C09363c7dD5e5D784A7736FAE1FcA430acF"; //WBTC
-export const stake5_address="0x0D1ffDC7b428E9514EE492d216b85EE3b62D5e64"; //PLSX
-export const stake6_address="0x0023da2943903C6Cd17009cC7a3B97c20d04f774"; //PLUTUS
+export const stake3_address="0x61cD011CB67E20ba66a1ccb68Da1F0980361A702";
+export const stake4_address="0x2f50561B5CE0bE4c7DDb274F1D5176B8659506bB"; //WBTC
+export const stake5_address="0xd1E97df16db4B69D4e7886Cd24A4C0A0684e3B01"; //PLSX
+export const stake6_address="0xB69D59b9B7e52E69A220b458a69cE6C6aea56Aa4"; //PLUTUS
 
 export  const Stake1_token_Address="0x95384953e541Ab1b7Fb11338Fc034B80b4A8fb81";
 export  const Stake2_token_Address="0x95384953e541Ab1b7Fb11338Fc034B80b4A8fb81";
