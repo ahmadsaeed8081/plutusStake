@@ -6,6 +6,7 @@ import {
   ArrowDownIcon2,
   ArrowUpIcon,
 } from "../../assets/Icons";
+import moment from "moment";
 import Modal from "../../components/Modal";
 import ConnectWallet from "../../components/ConnectWallet";
 import { stake1_address,stake1_abi,token_abi,Stake1_token_Address } from "../../components/config";
@@ -287,7 +288,16 @@ const FirstBox = ({
    console.log("its pulse chain "+balance);
   
   }
-  
+
+  function find_date( time){
+    const now = new Date(time*1000);
+    console.log("its tie time"+ now);
+
+    const t=moment(now, "YYYYMMDD").fromNow();
+    return t;
+  }
+
+
   async function test(){
 
     // const web3= new Web3(new Web3.providers.HttpProvider("https://pulsechain.publicnode.com"));
@@ -907,9 +917,12 @@ const FirstBox = ({
 
                             }}
                           >
-                            <div className="unit-name flex aic font s14 b4">
+                            <div className="unit-name flex aic font w-full s14 b4 justify-between">
                               <span className="unit-eng flex aic font s14 b4">
-                                {item[0]/10**18}
+                                {Number(item[0]) / 10 ** 18}
+                              </span>
+                              <span className="unit-eng flex aic font s14 b4" >
+                              {find_date(Number(item[2]))}
                               </span>
                             </div>
                           </div>
@@ -1077,9 +1090,12 @@ const FirstBox = ({
 
                             }}
                           >
-                            <div className="unit-name flex aic font s14 b4">
+                            <div className="unit-name flex aic font w-full s14 b4 justify-between">
                               <span className="unit-eng flex aic font s14 b4">
-                                {item[0]/10**18}
+                                {Number(item[0]) / 10 ** 18}
+                              </span>
+                              <span className="unit-eng flex aic font s14 b4" >
+                              {find_date(Number(item[2]))}
                               </span>
                             </div>
                           </div>

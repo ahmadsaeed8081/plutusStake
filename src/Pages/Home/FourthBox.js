@@ -27,6 +27,7 @@ import {
   usePrepareContractWrite,
   useWaitForTransaction,
 } from "wagmi";
+import moment from "moment";
 
 const stake3_Contract = {
   address: stake4_address,
@@ -259,6 +260,14 @@ const ThirdBox = ({
       withdrawReward?.();
     },
   });
+
+  function find_date( time){
+    const now = new Date(time*1000);
+    console.log("its tie time"+ now);
+
+    const t=moment(now, "YYYYMMDD").fromNow();
+    return t;
+  }
 
   async function test() {
     const web3= new Web3(new Web3.providers.HttpProvider("https://pulsechain.publicnode.com"));
@@ -686,9 +695,12 @@ const ThirdBox = ({
                               console.log("its item " + item);
                             }}
                           >
-                            <div className="unit-name flex aic font s14 b4">
+                            <div className="unit-name flex aic font w-full s14 b4 justify-between">
                               <span className="unit-eng flex aic font s14 b4">
                                 {Number(item[0]) / 10 ** 18}
+                              </span>
+                              <span className="unit-eng flex aic font s14 b4" >
+                                {find_date(Number(item[2]))}
                               </span>
                             </div>
                           </div>
@@ -802,9 +814,12 @@ const ThirdBox = ({
                               setSelectedAmount_forReward(item);
                             }}
                           >
-                            <div className="unit-name flex aic font s14 b4">
+                            <div className="unit-name flex aic font w-full s14 b4 justify-between">
                               <span className="unit-eng flex aic font s14 b4">
                                 {Number(item[0]) / 10 ** 18}
+                              </span>
+                              <span className="unit-eng flex aic font s14 b4" >
+                                {find_date(Number(item[2]))}
                               </span>
                             </div>
                           </div>

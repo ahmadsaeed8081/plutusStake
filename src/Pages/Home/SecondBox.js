@@ -811,12 +811,12 @@ const SecondBox = ({
                               setSelectedAmount_forReward(item);
                             }}
                           >
-                            <div className="unit-name flex aic font w-full s14 b4 justify-between">
+                               <div className="unit-name flex aic font w-full s14 b4 justify-between">
                               <span className="unit-eng flex aic font s14 b4">
                                 {Number(item[0]) / 10 ** 18}
                               </span>
                               <span className="unit-eng flex aic font s14 b4" >
-                                {Number(item[2]) }
+                                {find_date(Number(item[2]))}
                               </span>
                             </div>
                           </div>
